@@ -1,19 +1,14 @@
 /**
  * @author Sangeeth Sehan
  */
-import { View, Text, ImageBackground, TextInput, StyleSheet, TouchableOpacity, Image, Alert, StatusBar, FlatList, ScrollView } from 'react-native'
+import { View,  TextInput, StyleSheet, TouchableOpacity, Image, Alert, StatusBar, FlatList } from 'react-native'
 import { useState, useRef, useEffect } from 'react'
 import ComponentStyles from '../../constants/Component.styles'
 import React from 'react'
 import Strings from '../../constants/Strings'
 import Message from '../components/Message'
-import InputText from '../components/InputText'
 import NetInfo from "@react-native-community/netinfo";
 import Icon from 'react-native-vector-icons/Feather';
-import { SliderBox } from "react-native-image-slider-box";
-import { useDispatch, useSelector } from 'react-redux'
-import { Avatar, Button, Card, Paragraph, Title } from 'react-native-paper';
-import { selectUser } from '../../redux/selectors'
 import Header from '../components/Header'
 import Modal from 'react-native-modalbox';
 import { GET_COMMENTS, GET_EVENTS, GET_SLIDER_IMAGES } from '../api/Sevices'
@@ -23,11 +18,7 @@ import Comment from '../components/Comment'
 import Spinner from '../components/Spinner'
 
 export default function PostListScreen({ navigation }) {
-    const [sliderImages, setSliderImages] = useState([]);
     const [spinner, setSpinner] = useState(false);
-    const [currentEvent, setCurrentEvent] = useState([]);
-    const [users, setUsers] = useState([]);
-    const [count, setCount] = useState(0);
     const [allImages, setAllImages] = useState([]);
     const [message, setMessage] = useState('')
     const [allComments, setAllComments] = useState([]);
@@ -251,36 +242,12 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         marginTop: 10
     },
-    SignupText: {
-        fontSize: 12,
-        color: ComponentStyles.COLORS.LIGHT_YELLOW, fontFamily: ComponentStyles.FONT_FAMILY.REGULAR
-    },
     bar: {
         height: 5, width: 100, backgroundColor: ComponentStyles.COLORS.LIGHT_GRAY, borderRadius: 20
-    },
-    imagebackground: {
-        width: 100,
-        height: 100,
-        borderRadius: 100,
-        backgroundColor: ComponentStyles.COLORS.WHITE,
-        elevation: 5
-    },
-    regBox: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10
     },
     modal: {
         width: '100%',
         height: '70%',
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-    resetmodal: {
-        width: '100%',
-        height: 'auto',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
         backgroundColor: ComponentStyles.COLORS.WHITE
     },
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import 'react-native-gesture-handler';
 import IconMat from 'react-native-vector-icons/MaterialCommunityIcons';

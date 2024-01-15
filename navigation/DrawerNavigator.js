@@ -5,9 +5,9 @@ import StackNavigator from './StackNavigator';
 import DrawerContent from "../src/components/DrawerContent";
 
 const Drawer = createDrawerNavigator();
+
 export default function App() {
   return (
-
     <Drawer.Navigator
       drawerContent={props => <DrawerContent {...props} />}
     >

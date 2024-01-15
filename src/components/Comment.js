@@ -48,14 +48,7 @@ const Comment = (props) => {
 };
 
 const styles = StyleSheet.create({
-    cardTitleText: {
-        fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,
-        color: ComponentStyles.COLORS.BLACK, fontSize: 14
-    },
-    cardSubTitleText: {
-        fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,
-        color: ComponentStyles.COLORS.GRAY, fontSize: 14, marginTop: 10
-    },
+
     commentText: {
         fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,
         color: ComponentStyles.COLORS.BLACK, fontSize: 14,
@@ -72,10 +65,6 @@ const styles = StyleSheet.create({
     nameUserText: {
         fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,
         color: ComponentStyles.COLORS.BLACK, fontSize: 14, left: 10
-    },
-    valueText: {
-        fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,
-        color: ComponentStyles.COLORS.BLACK, fontSize: 14, marginTop: 10, marginLeft: 5
     },
     dateText: {
         fontFamily: ComponentStyles.FONT_FAMILY.REGULAR,

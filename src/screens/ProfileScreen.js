@@ -1,12 +1,11 @@
 /**
  * @author Sangeeth Sehan
  */
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Image, TouchableOpacity } from 'react-native'
 import { useState, useRef, useEffect } from 'react'
 import ComponentStyles from '../../constants/Component.styles'
 import React from 'react'
 import InputText from '../components/InputText'
-import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import { useDispatch, useSelector } from 'react-redux'
 import Header from '../components/Header'
 import { selectUser } from '../../redux/selectors'
@@ -21,7 +20,7 @@ export default function ProfileScreen({ navigation }) {
     const [phoneNumber, setPhoneNumber] = useState('');
     const user = useSelector(selectUser);
     const isFocused = useIsFocused();
-    const dispatch = useDispatch();
+
 
 
     useEffect(() => {
@@ -134,40 +133,5 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
         marginTop: 10
     },
-    SignupText: {
-        fontSize: 12,
-        color: ComponentStyles.COLORS.LIGHT_YELLOW, fontFamily: ComponentStyles.FONT_FAMILY.REGULAR
-    },
-    bar: {
-        height: 5, width: 100, backgroundColor: ComponentStyles.COLORS.LIGHT_GRAY, borderRadius: 20
-    },
-    imagebackground: {
-        width: 100,
-        height: 100,
-        borderRadius: 100,
-        backgroundColor: ComponentStyles.COLORS.WHITE,
-        elevation: 5
-    },
-    regBox: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10
-    },
-    modal: {
-        width: '100%',
-        height: '70%',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-    resetmodal: {
-        width: '100%',
-        height: 'auto',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-
-
+  
 });

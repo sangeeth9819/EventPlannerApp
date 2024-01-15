@@ -19,7 +19,7 @@ const Post = (props) => {
     return (
         <View style={[styles.container, { width: props.horizontal ? 250 : "" }]}>
             {props.post &&
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10 }}>
+                <View style={styles.subContainer}>
                     <View style={{ flexDirection: 'row', }}>
                         <View style={{ justifyContent: 'center' }}>
                             <Image borderRadius={30} source={JSONData.organizers[0].image} style={{ width: 35, height: 35 }}></Image>
@@ -90,6 +90,9 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         width: 250,
         shadowOpacity: 0.1,
+    },
+    subContainer: {
+        flexDirection: 'row', justifyContent: 'space-between', margin: 10,
     },
     image: {
         width: '100%', height: 120

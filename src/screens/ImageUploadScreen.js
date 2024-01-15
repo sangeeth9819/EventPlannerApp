@@ -6,10 +6,8 @@ import { useState, useRef, useEffect } from 'react'
 import ComponentStyles from '../../constants/Component.styles'
 import React from 'react'
 import ActionButton from '../components/ActionButton'
-import Strings from '../../constants/Strings'
 import storage from '@react-native-firebase/storage';
 import database from '@react-native-firebase/database';
-import Message from '../components/Message'
 import Icon from 'react-native-vector-icons/Feather';
 import { selectUser, selectUserName } from '../../redux/selectors';
 import * as ImagePicker from 'react-native-image-picker';
@@ -177,45 +175,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flex: 1
     },
-    resetContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        marginTop: 10
-    },
-    SignupText: {
-        fontSize: 12,
-        color: ComponentStyles.COLORS.LIGHT_YELLOW, fontFamily: ComponentStyles.FONT_FAMILY.REGULAR
-    },
-    bar: {
-        height: 5, width: 100, backgroundColor: ComponentStyles.COLORS.LIGHT_GRAY, borderRadius: 20
-    },
-    imagebackground: {
-        width: 100,
-        height: 100,
-        borderRadius: 100,
-        backgroundColor: ComponentStyles.COLORS.WHITE,
-        elevation: 5
-    },
-    regBox: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10
-    },
-    modal: {
-        width: '100%',
-        height: '70%',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-    resetmodal: {
-        width: '100%',
-        height: 'auto',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-
 
 });

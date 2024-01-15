@@ -16,7 +16,6 @@ import {
 } from '@react-navigation/drawer';
 import { CommonActions } from '@react-navigation/native';
 import ComponentStyles from "../../constants/Component.styles";
-import { connect, useSelector } from 'react-redux';
 import Icons from 'react-native-vector-icons/SimpleLineIcons';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AsyncStorageConstants } from "../../constants/Constants";

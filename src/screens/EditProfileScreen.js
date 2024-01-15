@@ -256,19 +256,7 @@ const styles = StyleSheet.create({
     },
     secondSubContainer: {
         justifyContent: 'center',
-        // flex: 1
     },
-    resetContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        marginTop: 10
-    },
-    SignupText: {
-        fontSize: 12,
-        color: ComponentStyles.COLORS.LIGHT_YELLOW, fontFamily: ComponentStyles.FONT_FAMILY.REGULAR
-    },
-    bar: {
-        height: 5, width: 100, backgroundColor: ComponentStyles.COLORS.LIGHT_GRAY, borderRadius: 20
-    },
+
 
 });

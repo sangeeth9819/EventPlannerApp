@@ -212,9 +212,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: ComponentStyles.FONT_FAMILY.REGULAR, color: ComponentStyles.COLORS.GRAY,
     },
-    container: {
-
-    },
     organizerText: {
         fontFamily: ComponentStyles.FONT_FAMILY.BOLD,
         color: ComponentStyles.COLORS.BLACK, fontSize: 22, height: 50
@@ -255,11 +252,6 @@ const styles = StyleSheet.create({
         margin: 10,
         justifyContent: 'center',
 
-    },
-    resetContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        marginTop: 10
     },
 
 });
