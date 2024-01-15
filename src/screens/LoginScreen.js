@@ -89,24 +89,6 @@ export default function LoginScreen({ navigation }) {
     }
 
 
-    /**
-     * This is to reset password and validation. 
-     */
-    const resetPasswordRequest = () => {
-        if (resetEmail == "") {
-            Message.messageName(Strings.WARNING, Strings.EMAIL_REQUIRED, Strings.TYPE[0], Strings.ICON[0]);
-        } else {
-            auth().sendPasswordResetEmail(resetEmail)
-                .then(function (user) {
-                    resetmodal.current.close()
-                    Message.messageName(Strings.WARNING, Strings.RESET_PASSWORD_EMAIL_SUCCESS, Strings.TYPE[1], Strings.ICON[1]);
-                }).catch(function (e) {
-                    console.log(e)
-                    Message.messageName(Strings.WARNING, Strings.RESET_PASSWORD_EMAIL_FAILED, Strings.TYPE[0], Strings.ICON[0]);
-                })
-        }
-    }
-
 
     return (
         <View style={ComponentStyles.CONTAINER}>

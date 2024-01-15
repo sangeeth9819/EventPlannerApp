@@ -38,7 +38,7 @@ export default function ProfileScreen({ navigation }) {
 
     return (
         <View style={ComponentStyles.CONTAINER}>
-            <Header profile={true} title={'Profile'} image={user.photo} />
+            <Header profile={true} title={'Profile'} image={user.photo} loading={false} />
             <View style={styles.subContainer}>
                 <View style={{ flex: 8 }}>
                     <View style={{ alignItems: 'center', margin: 10 }}>

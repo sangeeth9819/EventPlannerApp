@@ -1,7 +1,7 @@
 /**
  * @author Sangeeth Sehan
  */
-import { View, Text, StyleSheet, Image, TouchableOpacity, ScrollView, ImageBackground, Platform } from 'react-native'
+import { View,  StyleSheet, TouchableOpacity, ScrollView, ImageBackground, Platform } from 'react-native'
 import { useState, useRef, useEffect } from 'react'
 import ComponentStyles from '../../constants/Component.styles'
 import React from 'react'
@@ -138,7 +138,8 @@ export default function EditProfileScreen({ navigation }) {
             maillingAddress: maillingAddress
         }
         console.log(request)
-        database().ref('users/' + user.uid).update(request).then(async () => {
+        console.log(user)
+        database().ref('users/' + user.userId).update(request).then(async () => {
             Message.messageName(Strings.SUCCESS, Strings.UPDATE_SUCCESS, Strings.TYPE[1], Strings.ICON[1]);
             dispatch({
                 type: ADD_USER, payload: {
@@ -164,7 +165,7 @@ export default function EditProfileScreen({ navigation }) {
 
     return (
         <View style={ComponentStyles.CONTAINER}>
-            <Header back={true} title={'Edit Profile'} image={user.photo} />
+            <Header back={true} title={'Edit Profile'} image={user.photo} loading={false} />
             <View style={styles.subContainer}>
                 <ScrollView>
                     <View style={{ flex: 8 }}>
@@ -269,33 +270,5 @@ const styles = StyleSheet.create({
     bar: {
         height: 5, width: 100, backgroundColor: ComponentStyles.COLORS.LIGHT_GRAY, borderRadius: 20
     },
-    imagebackground: {
-        width: 100,
-        height: 100,
-        borderRadius: 100,
-        backgroundColor: ComponentStyles.COLORS.WHITE,
-        elevation: 5
-    },
-    regBox: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 10
-    },
-    modal: {
-        width: '100%',
-        height: '70%',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-    resetmodal: {
-        width: '100%',
-        height: 'auto',
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        backgroundColor: ComponentStyles.COLORS.WHITE
-    },
-
 
 });

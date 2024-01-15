@@ -15,6 +15,7 @@ import {
   getFcmToken,
   requestUserPermission,
   notificationListener,
+  createChanel
 } from './src/firebase/Index';
 
 // Main screen
@@ -44,7 +45,6 @@ const theme = {
 };
 
 const App = () => {
-
   const [generatedToken, setGeneratedToken] = useState();
 
   useEffect(() => {
@@ -73,6 +73,8 @@ const App = () => {
     void fetchToken();
     void requestUserPermission();
     void notificationListener();
+    void createChanel()
+    
   }, []);
 
   return (

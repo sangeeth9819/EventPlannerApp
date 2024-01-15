@@ -4,7 +4,7 @@ import 'react-native-gesture-handler';
 import IconMat from 'react-native-vector-icons/MaterialCommunityIcons';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../src/screens/Home'
+import Home from '../src/screens/HomeScreen'
 import Profile from '../src/screens/ProfileScreen'
 import ComponentStyles from '../constants/Component.styles'
 

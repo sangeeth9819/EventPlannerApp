@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import ComponentStyles from "../../constants/Component.styles";
 import Icon from 'react-native-vector-icons/Ionicons';
 import { useNavigation } from '@react-navigation/native';
+import { ProgressBar } from "react-native-paper";
 
 const Header = (props) => {
     const navigation = useNavigation();
@@ -33,6 +34,7 @@ const Header = (props) => {
                         </View>
                     </View>
                 </View>
+                <ProgressBar indeterminate={true} style={{ height: 2, top: 10 }} visible={props.loading} color={ComponentStyles.COLORS.MORE_DARK_BL} />
             </View>
         </View>
     );

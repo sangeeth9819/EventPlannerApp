@@ -64,7 +64,7 @@ export default function SignUpScreen({ navigation }) {
         database().ref('users/' + value.uid).set(request).then(async () => {
             Message.messageName(Strings.SUCCESS, Strings.LOGIN_SUCCESS, Strings.TYPE[1], Strings.ICON[1]);
             await AsyncStorage.setItem(AsyncStorageConstants.ASYNC_USER, JSON.stringify(request), () => {
-                dispatch({ type: ADD_USER, payload: { email: value.email, userid: value.uid } })
+                dispatch({ type: ADD_USER, payload: { email: value.email, userId: value.uid } })
                 navigation.replace('ImageUploadScreen', { id: value.uid })
             })
             setSpinner(false)
