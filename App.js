@@ -16,7 +16,7 @@ import {
   requestUserPermission,
   notificationListener,
   createChanel
-} from './src/firebase/Index';
+} from './src/notification/Index';
 
 // Main screen
 import DrawerNavigator from "./navigation/DrawerNavigator";
