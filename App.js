@@ -63,7 +63,7 @@ const App = () => {
 
   /**
    *  Getting FCM token related to the app and adding notification listerner
-   * for both backgroud and forgroun as well as create a chanel for notification using notifi
+   * for both backgroud and foreground as well as create a chanel for notification using notifi
    */
   useEffect(() => {
     const fetchToken = async () => {
