@@ -47,10 +47,9 @@ const theme = {
 const App = () => {
   const [generatedToken, setGeneratedToken] = useState();
 
-  useEffect(() => {
-    console.log(generatedToken);
-  }, [generatedToken]);
-
+  /**
+   *  This method to check android permision is allow or not in android 13
+   */
   const checkApplicationPermission = async () => {
     if (Platform.OS === 'android') {
       try {
@@ -62,6 +61,10 @@ const App = () => {
     }
   };
 
+  /**
+   *  Getting FCM token related to the app and adding notification listerner
+   * for both backgroud and forgroun as well as create a chanel for notification using notifi
+   */
   useEffect(() => {
     const fetchToken = async () => {
       const token = await getFcmToken();
@@ -74,7 +77,7 @@ const App = () => {
     void requestUserPermission();
     void notificationListener();
     void createChanel()
-    
+
   }, []);
 
   return (
