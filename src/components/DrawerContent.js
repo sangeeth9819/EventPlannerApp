@@ -20,6 +20,7 @@ import Icons from 'react-native-vector-icons/SimpleLineIcons';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { AsyncStorageConstants } from "../../constants/Constants";
 import { selectUser } from '../../redux/selectors';
+import { useSelector } from 'react-redux';
 
 export default function DrawerContent({ navigation }) {
     const user = useSelector(selectUser);

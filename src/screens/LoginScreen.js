@@ -162,5 +162,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         flex: 3
     },
+    resetContainer:{
+        flexDirection:'row',
+        justifyContent:'flex-end'
+    }
 
 });
